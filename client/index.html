@@ -50,7 +50,7 @@
                                   <label>
                                     <input type="checkbox" ng-model="todo.checked" ng-change="showDelete(todo._id)"> {{ todo.text }}
                                   </label>
-				  <label> <!--id="deleteLabel" ng-click="deleteTodo(todo._id)"-->
+				  <label ng-click="deleteTodo(todo._id)">
 				   [Delete]
 				  </label>
                                  </div>
