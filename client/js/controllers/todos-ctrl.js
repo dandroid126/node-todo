@@ -46,11 +46,13 @@ angular.module('todoController', [])
 			console.log('Error: ' + data);
 		    });
 	    };
-/*
+
+/*          this obviously does not work for so many reasons. but this was my train of thought...
 	    $scope.showDelete = fuction(id) {
 		document.getElementById("deleteLabel").style.visibility = "visible";
 	    }
 */
+
 	    $scope.clickSnooze = function(id){
 		//mark as snoozed
 	    }
