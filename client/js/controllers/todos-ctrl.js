@@ -34,5 +34,24 @@ angular.module('todoController', [])
 					});
 			}
 		};
-
+	    
+	    // delete a todo when delete is clicked
+	    $scope.deleteTodo = function(id) {
+		$http.delete('/api/todos/' + id)
+		    .success(function(data) {
+			$scope.todos = data;
+			console.log(data);
+		    })
+		    .error(function(data) {
+			console.log('Error: ' + data);
+		    });
+	    };
+/*
+	    $scope.showDelete = fuction(id) {
+		document.getElementById("deleteLabel").style.visibility = "visible";
+	    }
+*/
+	    $scope.clickSnooze = function(id){
+		//mark as snoozed
+	    }
 	}]);
